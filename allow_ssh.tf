@@ -1,9 +1,9 @@
-resource "sg-0514a63dffef6e5fe" "secure_ssh" {
+resource "aws_vpc" "sg-0514a63dffef6e5fe" {
        name        = "secure ssh"
        description = "allow ssh from my home ip"
-       vpc_id      = "${vpc-02ef769587dd081cf }"
+       vpc_id      = "${vpc-02ef769587dd081cf.id}"
        tags {
-         Name = "my_sg_tag"
+         Name = "secure_ssh"
        }
 
        #Not redundant - Inbound Access
