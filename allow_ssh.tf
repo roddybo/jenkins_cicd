@@ -1,10 +1,7 @@
 resource "aws_security_group" "my_sg" {
        name        = "my_sg"
-       description = "Some description"
+       description = "allow ssh access"
        vpc_id      = "vpc-02ef769587dd081cf"
-       tags {
-         Name = "my_sg_tag"
-       }
 
        #Not redundant - Inbound Access
        ingress {
