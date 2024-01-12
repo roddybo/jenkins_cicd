@@ -1,7 +1,3 @@
-provider "aws" {
-  region = "us-east-1"  # Change this to your desired AWS region
-}
-
 resource "aws_instance" "jenkins_instance" {
   ami           = "ami-0c55b159cbfafe1f0"  # Use your preferred Jenkins AMI
   instance_type = "t2.micro"
