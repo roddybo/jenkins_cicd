@@ -1,14 +1,10 @@
-provider "aws" {
-  region = "us-east-1"  # Replace with your desired region
-}
-
 resource "aws_instance" "ubuntu_instance" {
-  ami           = "ami-xxxxxxxxxxxxxxxxx"  # Replace with your Ubuntu AMI ID
+  ami           = "ami-0c7217cdde317cfec"  # Replace with your Ubuntu AMI ID
   instance_type = "t2.micro"                # Replace with your instance type
   key_name      = "your-key-pair-name"      # Replace with your key pair name
 
-  subnet_id             = "your-subnet-id"           # Replace with your subnet ID
-  vpc_security_group_ids = ["your-security-group-id"] # Replace with your security group ID
+  subnet_id             = "subnet-0e7aa15edbd6d56ad"           # Replace with your subnet ID
+  vpc_security_group_ids = ["sg-0f4f7384e317671fc"] # Replace with your security group ID
 
   tags = {
     Name = "MyInstance"
