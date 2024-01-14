@@ -15,12 +15,5 @@ resource "aws_instance" "ubuntu_instance" {
       "sudo apt-get update",
       "sudo apt-get install -y apache2",
     ]
-
-    connection {
-      type        = "ssh"
-      user        = "ubuntu"
-      private_key = file("[4m/Users/admin/.ssh/id_rsa[0m")  # Replace with the path to your private key file
-      host        = self.public_ip
-    }
   }
 }
