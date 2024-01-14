@@ -19,7 +19,7 @@ resource "aws_instance" "ubuntu_instance" {
     connection {
       type        = "ssh"
       user        = "ubuntu"
-      private_key = file("/path/to/your/private-key.pem")  # Replace with the path to your private key file
+      private_key = file("/Users/admin/.ssh/id_rsa")  # Replace with the path to your private key file
       host        = self.public_ip
     }
   }
